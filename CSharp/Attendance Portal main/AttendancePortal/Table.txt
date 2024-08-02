@@ -1,0 +1,85 @@
+Database name AttSystem 
+admin 123
+
+
+
+CREATE TABLE Attendancemst (
+    AID INT PRIMARY KEY AUTO_INCREMENT,
+    Rollno NVARCHAR(50),
+    Name NVARCHAR(50),
+    Date DATE,
+    Status NVARCHAR(50),
+    StaffName NVARCHAR(50),
+    EDate DATETIME
+);
+CREATE TABLE Complainmst (
+    CID INT PRIMARY KEY AUTO_INCREMENT,
+    Rollno NVARCHAR(50),
+    Name NVARCHAR(50),
+    Subject NVARCHAR(50),
+    Message NVARCHAR(500),
+    Reply NVARCHAR(500),
+    EDate DATETIME
+);
+CREATE TABLE DivMst (
+    DID INT PRIMARY KEY AUTO_INCREMENT,
+    DivName CHAR(1),
+    StdName NVARCHAR(50),
+    Seat INT,
+    EDate DATETIME
+);
+CREATE TABLE FeedBackMst (
+    FID INT PRIMARY KEY AUTO_INCREMENT,
+    Email NVARCHAR(50),
+    Mobile NVARCHAR(50),
+    Feedback NVARCHAR(500),
+    EDate DATETIME
+);
+CREATE TABLE LeaveMst (
+    LID INT PRIMARY KEY AUTO_INCREMENT,
+    Rollno NVARCHAR(50),
+    Name NVARCHAR(50),
+    StdName NVARCHAR(50),
+    Message NVARCHAR(500),
+    NoDays INT,
+    Reply NVARCHAR(500),
+    EDate DATETIME
+);
+CREATE TABLE StaffMst (
+    SID INT PRIMARY KEY AUTO_INCREMENT,
+    Name NVARCHAR(50),
+    StdName NVARCHAR(50),
+    Email NVARCHAR(50),
+    Mobile NVARCHAR(50),
+    Image NVARCHAR(50),
+    Qualification NVARCHAR(50),
+    Add NVARCHAR(50),
+    City NVARCHAR(50),
+    Pincode NVARCHAR(50),
+    Uname NVARCHAR(50),
+    Pass NVARCHAR(50),
+    Gender NVARCHAR(50),
+    EDate DATETIME
+);
+CREATE TABLE StudentMst (
+    SID INT PRIMARY KEY AUTO_INCREMENT,
+    RollNo NVARCHAR(50),
+    Name NVARCHAR(MAX),
+    StdName NVARCHAR(50),
+    DivName NVARCHAR(50),
+    Email NVARCHAR(50),
+    Mobile NVARCHAR(50),
+    DOB NVARCHAR(50),
+    Image NVARCHAR(50),
+    Add NVARCHAR(50),
+    City NVARCHAR(50),
+    Pincode NVARCHAR(50),
+    Uname NVARCHAR(50),
+    Pass NVARCHAR(50),
+    EDate DATETIME
+);
+CREATE TABLE StdMst (
+    SID INT PRIMARY KEY AUTO_INCREMENT,
+    StdName NVARCHAR(50),
+    EDate DATETIME
+);
